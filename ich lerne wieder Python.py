@@ -29,8 +29,9 @@ def GleichungVonGleichung(gleich, gleich2):
     funktionswert2 = gl2[0]
     argument2 = gl2[2]
 
-    achsenabschnittWert = float(argument2) * float(funktionswert) - (float(argument) * float(funktionswert2)) #falsch
-    steigungWert = (float(funktionswert) - float(achsenabschnittWert)) / float(argument)
+    steigungWert = (float(funktionswert)-float(funktionswert2))/(float(argument)-float(argument2))
+    achsenabschnittWert = float(funktionswert) - (float(steigungWert) * float(argument)) 
+
 
     print(argument, argument2, funktionswert, funktionswert2, steigungWert, achsenabschnittWert)
 
@@ -45,7 +46,7 @@ def GleichungVonGleichung(gleich, gleich2):
         funktionsGleichung = f"y = {steigungWert} * x + {achsenabschnittWert}"
     return funktionsGleichung
 
-print(GleichungVonGleichung("0 = k * 1 + d","8 = k * 9 + d"))
+print(GleichungVonGleichung("2 = k * 2 + d","8 = k * 9 + d"))
 
 
 
